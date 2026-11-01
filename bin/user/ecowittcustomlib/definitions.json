@@ -1,0 +1,2669 @@
+{
+  "_copyright": [
+    "2016-2020 Matthew Wall",
+    "2025-2026 Werner Krenn",
+    "2026 Manuel Hilgert"
+  ],
+  "_license": "GPL-3.0-only",
+  "_changed": "2026-11-01: extracted and corrected inherited definitions; independently maintained.",
+  "sensor_map": {
+    "pressure": "pressure",
+    "barometer": "barometer",
+    "outHumidity": "humidity_out",
+    "inHumidity": "humidity_in",
+    "outTemp": "temperature_out",
+    "inTemp": "temperature_in",
+    "windSpeed": "wind_speed",
+    "windGust": "wind_gust",
+    "windDir": "wind_dir",
+    "windGustDir": "wind_gust_dir",
+    "radiation": "solar_radiation",
+    "dewpoint": "dewpoint",
+    "windchill": "windchill",
+    "rain": "rain",
+    "rainRate": "rain_rate",
+    "UV": "uv",
+    "txBatteryStatus": "battery",
+    "extraTemp1": "temperature_1",
+    "extraTemp2": "temperature_2",
+    "extraTemp3": "temperature_3",
+    "extraTemp4": "temperature_4",
+    "extraTemp5": "temperature_5",
+    "extraTemp6": "temperature_6",
+    "extraTemp7": "temperature_7",
+    "extraTemp8": "temperature_8",
+    "extraHumid1": "humidity_1",
+    "extraHumid2": "humidity_2",
+    "extraHumid3": "humidity_3",
+    "extraHumid4": "humidity_4",
+    "extraHumid5": "humidity_5",
+    "extraHumid6": "humidity_6",
+    "extraHumid7": "humidity_7",
+    "extraHumid8": "humidity_8",
+    "soilTemp1": "tf_ch1",
+    "soilTemp2": "tf_ch2",
+    "soilTemp3": "tf_ch3",
+    "soilTemp4": "tf_ch4",
+    "soilTemp5": "tf_ch5",
+    "soilTemp6": "tf_ch6",
+    "soilTemp7": "tf_ch7",
+    "soilTemp8": "tf_ch8",
+    "soilMoist1": "soil_moisture_1",
+    "soilMoist2": "soil_moisture_2",
+    "soilMoist3": "soil_moisture_3",
+    "soilMoist4": "soil_moisture_4",
+    "soilMoist5": "soil_moisture_5",
+    "soilMoist6": "soil_moisture_6",
+    "soilMoist7": "soil_moisture_7",
+    "soilMoist8": "soil_moisture_8",
+    "soilMoist9": "soil_moisture_9",
+    "soilMoist10": "soil_moisture_10",
+    "soilMoist11": "soil_moisture_11",
+    "soilMoist12": "soil_moisture_12",
+    "soilMoist13": "soil_moisture_13",
+    "soilMoist14": "soil_moisture_14",
+    "soilMoist15": "soil_moisture_15",
+    "soilMoist16": "soil_moisture_16",
+    "co2": "co2",
+    "co2_24h": "co2_24h",
+    "co2in": "co2in",
+    "co2in_24h": "co2in_24h",
+    "co2_Temp": "tf_co2",
+    "co2_Hum": "humi_co2",
+    "co2_Batt": "co2_batt",
+    "co2_batt6": "co2_batt6",
+    "pm1_0": "pm1_co2",
+    "pm4_0": "pm4_co2",
+    "pm10_0": "pm10_co2",
+    "pm2_5": "pm25_co2",
+    "pm25_1": "pm25_ch1",
+    "pm25_2": "pm25_ch2",
+    "pm25_3": "pm25_ch3",
+    "pm25_4": "pm25_ch4",
+    "pm25_Batt1": "pm25batt1",
+    "pm25_Batt2": "pm25batt2",
+    "pm25_Batt3": "pm25batt3",
+    "pm25_Batt4": "pm25batt4",
+    "batteryStatus1": "battery_1",
+    "batteryStatus2": "battery_2",
+    "batteryStatus3": "battery_3",
+    "batteryStatus4": "battery_4",
+    "batteryStatus5": "battery_5",
+    "batteryStatus6": "battery_6",
+    "batteryStatus7": "battery_7",
+    "batteryStatus8": "battery_8",
+    "soilMoistBatt1": "soilbatt1",
+    "soilMoistBatt2": "soilbatt2",
+    "soilMoistBatt3": "soilbatt3",
+    "soilMoistBatt4": "soilbatt4",
+    "soilMoistBatt5": "soilbatt5",
+    "soilMoistBatt6": "soilbatt6",
+    "soilMoistBatt7": "soilbatt7",
+    "soilMoistBatt8": "soilbatt8",
+    "soilMoistBatt9": "soilbatt9",
+    "soilMoistBatt10": "soilbatt10",
+    "soilMoistBatt11": "soilbatt11",
+    "soilMoistBatt12": "soilbatt12",
+    "soilMoistBatt13": "soilbatt13",
+    "soilMoistBatt14": "soilbatt14",
+    "soilMoistBatt15": "soilbatt15",
+    "soilMoistBatt16": "soilbatt16",
+    "soilTempBatt1": "tf_batt1",
+    "soilTempBatt2": "tf_batt2",
+    "soilTempBatt3": "tf_batt3",
+    "soilTempBatt4": "tf_batt4",
+    "soilTempBatt5": "tf_batt5",
+    "soilTempBatt6": "tf_batt6",
+    "soilTempBatt7": "tf_batt7",
+    "soilTempBatt8": "tf_batt8",
+    "soilTempBatt9": "tf_batt9",
+    "soilTempBatt10": "tf_batt10",
+    "soilTempBatt11": "tf_batt11",
+    "soilTempBatt12": "tf_batt12",
+    "soilTempBatt13": "tf_batt13",
+    "soilTempBatt14": "tf_batt14",
+    "soilTempBatt15": "tf_batt15",
+    "soilTempBatt16": "tf_batt16",
+    "leafWet1": "leafwetness_ch1",
+    "leafWet2": "leafwetness_ch2",
+    "leafWet3": "leafwetness_ch3",
+    "leafWet4": "leafwetness_ch4",
+    "leafWet5": "leafwetness_ch5",
+    "leafWet6": "leafwetness_ch6",
+    "leafWet7": "leafwetness_ch7",
+    "leafWet8": "leafwetness_ch8",
+    "leafWetBatt1": "leaf_batt1",
+    "leafWetBatt2": "leaf_batt2",
+    "leafWetBatt3": "leaf_batt3",
+    "leafWetBatt4": "leaf_batt4",
+    "leafWetBatt5": "leaf_batt5",
+    "leafWetBatt6": "leaf_batt6",
+    "leafWetBatt7": "leaf_batt7",
+    "leafWetBatt8": "leaf_batt8",
+    "leak_1": "leak_ch1",
+    "leak_2": "leak_ch2",
+    "leak_3": "leak_ch3",
+    "leak_4": "leak_ch4",
+    "leak_Batt1": "leakbatt1",
+    "leak_Batt2": "leakbatt2",
+    "leak_Batt3": "leakbatt3",
+    "leak_Batt4": "leakbatt4",
+    "lightning_dist": "lightning",
+    "lightning_distance": "lightning",
+    "lightning_disturber_count": "lightning_time",
+    "lightning_num": "lightning_num",
+    "lightning_strike_count": "lightning_strike_count",
+    "lightning_Batt": "wh57batt",
+    "maxdailygust": "maxdailygust",
+    "winddir_avg10m": "winddir_avg10m",
+    "windDir10": "winddir_avg10m",
+    "windspdmph_avg10m": "windspdmph_avg10m",
+    "pm1_24h_co2": "pm1_24h_co2",
+    "pm4_24h_co2": "pm4_24h_co2",
+    "pm25_24h_co2": "pm25_24h_co2",
+    "pm10_24h_co2": "pm10_24h_co2",
+    "pm25_avg_24h_ch1": "pm25_avg_24h_ch1",
+    "pm25_avg_24h_ch2": "pm25_avg_24h_ch2",
+    "pm25_avg_24h_ch3": "pm25_avg_24h_ch3",
+    "pm25_avg_24h_ch4": "pm25_avg_24h_ch4",
+    "consBatteryVoltage": "console_batt",
+    "rainBatteryStatus": "wh40batt",
+    "hailBatteryStatus": "wh90batt",
+    "windBatteryStatus": "wh80batt",
+    "ws90_batt": "wh90batt",
+    "ws80_batt": "wh80batt",
+    "ws85_batt": "wh85batt",
+    "wh24_batt": "wh24batt",
+    "wh25_batt": "wh25batt",
+    "wh26_batt": "wh26batt",
+    "wh65_batt": "wh65batt",
+    "wh68_batt": "wh68batt",
+    "wh69_batt": "wh69batt",
+    "outTempBatteryStatus": "wh65batt",
+    "inTempBatteryStatus": "wh25batt",
+    "rainrate": "rainratein",
+    "totalRain": "rain_total",
+    "eventRain": "eventrainin",
+    "hourRain": "hourlyrainin",
+    "dayRain": "dailyrainin",
+    "rain24": "last24hourlyrainin",
+    "weekRain": "weeklyrainin",
+    "monthRain": "monthlyrainin",
+    "yearRain": "rainyear",
+    "p_rain": "rain_piezo",
+    "p_rainrate": "rrain_piezo",
+    "hail": "rain_piezo",
+    "hailRate": "rrain_piezo",
+    "erain_piezo": "erain_piezo",
+    "hrain_piezo": "hrain_piezo",
+    "drain_piezo": "drain_piezo",
+    "rain24_piezo": "last24hrain_piezo",
+    "wrain_piezo": "wrain_piezo",
+    "mrain_piezo": "mrain_piezo",
+    "yrain_piezo": "yrain_piezo",
+    "train_piezo": "total_piezo",
+    "srain_piezo": "srain_piezo",
+    "ws90cap_volt": "ws90cap_volt",
+    "ws85cap_volt": "ws85cap_volt",
+    "ws90_ver": "ws90_ver",
+    "ws85_ver": "ws85_ver",
+    "runtime": "runtime",
+    "ws_interval": "ws_interval",
+    "model": "model",
+    "stationtype": "stationtype",
+    "gain0": "gain0",
+    "gain1": "gain1",
+    "gain2": "gain2",
+    "gain3": "gain3",
+    "gain4": "gain4",
+    "gain5": "gain5",
+    "gain6": "gain6",
+    "gain7": "gain7",
+    "gain8": "gain8",
+    "gain9": "gain9",
+    "soilad1": "soilad1",
+    "soilad2": "soilad2",
+    "soilad3": "soilad3",
+    "soilad4": "soilad4",
+    "soilad5": "soilad5",
+    "soilad6": "soilad6",
+    "soilad7": "soilad7",
+    "soilad8": "soilad8",
+    "soilad9": "soilad9",
+    "soilad10": "soilad10",
+    "soilad11": "soilad11",
+    "soilad12": "soilad12",
+    "soilad13": "soilad13",
+    "soilad14": "soilad14",
+    "soilad15": "soilad15",
+    "soilad16": "soilad16",
+    "soilEC1": "soilEC1",
+    "soilEC2": "soilEC2",
+    "soilEC3": "soilEC3",
+    "soilEC4": "soilEC4",
+    "soilEC5": "soilEC5",
+    "soilEC6": "soilEC6",
+    "soilEC7": "soilEC7",
+    "soilEC8": "soilEC8",
+    "soilEC9": "soilEC9",
+    "soilEC10": "soilEC10",
+    "soilEC11": "soilEC11",
+    "soilEC12": "soilEC12",
+    "soilEC13": "soilEC13",
+    "soilEC14": "soilEC14",
+    "soilEC15": "soilEC15",
+    "soilEC16": "soilEC16",
+    "soilmTemp1": "soilmTemp1",
+    "soilmTemp2": "soilmTemp2",
+    "soilmTemp3": "soilmTemp3",
+    "soilmTemp4": "soilmTemp4",
+    "soilmTemp5": "soilmTemp5",
+    "soilmTemp6": "soilmTemp6",
+    "soilmTemp7": "soilmTemp7",
+    "soilmTemp8": "soilmTemp8",
+    "soilmTemp9": "soilmTemp9",
+    "soilmTemp10": "soilmTemp10",
+    "soilmTemp11": "soilmTemp11",
+    "soilmTemp12": "soilmTemp12",
+    "soilmTemp13": "soilmTemp13",
+    "soilmTemp14": "soilmTemp14",
+    "soilmTemp15": "soilmTemp15",
+    "soilmTemp16": "soilmTemp16",
+    "soilECad1": "soilECad1",
+    "soilECad2": "soilECad2",
+    "soilECad3": "soilECad3",
+    "soilECad4": "soilECad4",
+    "soilECad5": "soilECad5",
+    "soilECad6": "soilECad6",
+    "soilECad7": "soilECad7",
+    "soilECad8": "soilECad8",
+    "soilECad9": "soilECad9",
+    "soilECad10": "soilECad10",
+    "soilECad11": "soilECad11",
+    "soilECad12": "soilECad12",
+    "soilECad13": "soilECad13",
+    "soilECad14": "soilECad14",
+    "soilECad15": "soilECad15",
+    "soilECad16": "soilECad16",
+    "heap": "heap",
+    "wh24_sig": "wh24sig",
+    "wh25_sig": "wh25sig",
+    "wh26_sig": "wh26sig",
+    "wh31_ch1_sig": "wh31sig1",
+    "wh31_ch2_sig": "wh31sig2",
+    "wh31_ch3_sig": "wh31sig3",
+    "wh31_ch4_sig": "wh31sig4",
+    "wh31_ch5_sig": "wh31sig5",
+    "wh31_ch6_sig": "wh31sig6",
+    "wh31_ch7_sig": "wh31sig7",
+    "wh31_ch8_sig": "wh31sig8",
+    "wn34_ch1_sig": "wh34sig1",
+    "wn34_ch2_sig": "wh34sig2",
+    "wn34_ch3_sig": "wh34sig3",
+    "wn34_ch4_sig": "wh34sig4",
+    "wn34_ch5_sig": "wh34sig5",
+    "wn34_ch6_sig": "wh34sig6",
+    "wn34_ch7_sig": "wh34sig7",
+    "wn34_ch8_sig": "wh34sig8",
+    "wn34_ch9_sig": "wh34sig9",
+    "wn34_ch10_sig": "wh34sig10",
+    "wn34_ch11_sig": "wh34sig11",
+    "wn34_ch12_sig": "wh34sig12",
+    "wn34_ch13_sig": "wh34sig13",
+    "wn34_ch14_sig": "wh34sig14",
+    "wn34_ch15_sig": "wh34sig15",
+    "wn34_ch16_sig": "wh34sig16",
+    "wn35_ch1_sig": "wh35sig1",
+    "wn35_ch2_sig": "wh35sig2",
+    "wn35_ch3_sig": "wh35sig3",
+    "wn35_ch4_sig": "wh35sig4",
+    "wn35_ch5_sig": "wh35sig5",
+    "wn35_ch6_sig": "wh35sig6",
+    "wn35_ch7_sig": "wh35sig7",
+    "wn35_ch8_sig": "wh35sig8",
+    "wn38_sig": "wn38sig",
+    "wh40_sig": "wh40sig",
+    "wh41_ch1_sig": "wh41sig1",
+    "wh41_ch2_sig": "wh41sig2",
+    "wh41_ch3_sig": "wh41sig3",
+    "wh41_ch4_sig": "wh41sig4",
+    "wh45_sig": "wh45sig",
+    "wh51_ch1_sig": "wh51sig1",
+    "wh51_ch2_sig": "wh51sig2",
+    "wh51_ch3_sig": "wh51sig3",
+    "wh51_ch4_sig": "wh51sig4",
+    "wh51_ch5_sig": "wh51sig5",
+    "wh51_ch6_sig": "wh51sig6",
+    "wh51_ch7_sig": "wh51sig7",
+    "wh51_ch8_sig": "wh51sig8",
+    "wh51_ch9_sig": "wh51sig9",
+    "wh51_ch10_sig": "wh51sig10",
+    "wh51_ch11_sig": "wh51sig11",
+    "wh51_ch12_sig": "wh51sig12",
+    "wh51_ch13_sig": "wh51sig13",
+    "wh51_ch14_sig": "wh51sig14",
+    "wh51_ch15_sig": "wh51sig15",
+    "wh51_ch16_sig": "wh51sig16",
+    "wh55_ch1_sig": "wh55sig1",
+    "wh55_ch2_sig": "wh55sig2",
+    "wh55_ch3_sig": "wh55sig3",
+    "wh55_ch4_sig": "wh55sig4",
+    "wh57_sig": "wh57sig",
+    "wh65_sig": "wh65sig",
+    "wh68_sig": "wh68sig",
+    "wh69_sig": "wh69sig",
+    "ws80_sig": "wh80sig",
+    "ws85_sig": "wh85sig",
+    "ws90_sig": "wh90sig",
+    "wh54_ch1_sig": "wh54sig1",
+    "wh54_ch2_sig": "wh54sig2",
+    "wh54_ch3_sig": "wh54sig3",
+    "wh54_ch4_sig": "wh54sig4",
+    "wn64_sig": "wn64sig",
+    "wqt01_sig": "wqt01sig",
+    "wn20_rssi": "wn20rssi",
+    "wh24_rssi": "wh24rssi",
+    "wh25_rssi": "wh25rssi",
+    "wh26_rssi": "wh26rssi",
+    "wh31_ch1_rssi": "wh31rssi1",
+    "wh31_ch2_rssi": "wh31rssi2",
+    "wh31_ch3_rssi": "wh31rssi3",
+    "wh31_ch4_rssi": "wh31rssi4",
+    "wh31_ch5_rssi": "wh31rssi5",
+    "wh31_ch6_rssi": "wh31rssi6",
+    "wh31_ch7_rssi": "wh31rssi7",
+    "wh31_ch8_rssi": "wh31rssi8",
+    "wn34_ch1_rssi": "wh34rssi1",
+    "wn34_ch2_rssi": "wh34rssi2",
+    "wn34_ch3_rssi": "wh34rssi3",
+    "wn34_ch4_rssi": "wh34rssi4",
+    "wn34_ch5_rssi": "wh34rssi5",
+    "wn34_ch6_rssi": "wh34rssi6",
+    "wn34_ch7_rssi": "wh34rssi7",
+    "wn34_ch8_rssi": "wh34rssi8",
+    "wn34_ch9_rssi": "wh34rssi9",
+    "wn34_ch10_rssi": "wh34rssi10",
+    "wn34_ch11_rssi": "wh34rssi11",
+    "wn34_ch12_rssi": "wh34rssi12",
+    "wn34_ch13_rssi": "wh34rssi13",
+    "wn34_ch14_rssi": "wh34rssi14",
+    "wn34_ch15_rssi": "wh34rssi15",
+    "wn34_ch16_rssi": "wh34rssi16",
+    "wn35_ch1_rssi": "wh35rssi1",
+    "wn35_ch2_rssi": "wh35rssi2",
+    "wn35_ch3_rssi": "wh35rssi3",
+    "wn35_ch4_rssi": "wh35rssi4",
+    "wn35_ch5_rssi": "wh35rssi5",
+    "wn35_ch6_rssi": "wh35rssi6",
+    "wn35_ch7_rssi": "wh35rssi7",
+    "wn35_ch8_rssi": "wh35rssi8",
+    "wn38_rssi": "wn38rssi",
+    "wh40_rssi": "wh40rssi",
+    "wh41_ch1_rssi": "wh41rssi1",
+    "wh41_ch2_rssi": "wh41rssi2",
+    "wh41_ch3_rssi": "wh41rssi3",
+    "wh41_ch4_rssi": "wh41rssi4",
+    "wh45_rssi": "wh45rssi",
+    "wh51_ch1_rssi": "wh51rssi1",
+    "wh51_ch2_rssi": "wh51rssi2",
+    "wh51_ch3_rssi": "wh51rssi3",
+    "wh51_ch4_rssi": "wh51rssi4",
+    "wh51_ch5_rssi": "wh51rssi5",
+    "wh51_ch6_rssi": "wh51rssi6",
+    "wh51_ch7_rssi": "wh51rssi7",
+    "wh51_ch8_rssi": "wh51rssi8",
+    "wh51_ch9_rssi": "wh51rssi9",
+    "wh51_ch10_rssi": "wh51rssi10",
+    "wh51_ch11_rssi": "wh51rssi11",
+    "wh51_ch12_rssi": "wh51rssi12",
+    "wh51_ch13_rssi": "wh51rssi13",
+    "wh51_ch14_rssi": "wh51rssi14",
+    "wh51_ch15_rssi": "wh51rssi15",
+    "wh51_ch16_rssi": "wh51rssi16",
+    "wh54_ch1_rssi": "wh54rssi1",
+    "wh54_ch2_rssi": "wh54rssi2",
+    "wh54_ch3_rssi": "wh54rssi3",
+    "wh54_ch4_rssi": "wh54rssi4",
+    "wh55_ch1_rssi": "wh55rssi1",
+    "wh55_ch2_rssi": "wh55rssi2",
+    "wh55_ch3_rssi": "wh55rssi3",
+    "wh55_ch4_rssi": "wh55rssi4",
+    "wh57_rssi": "wh57rssi",
+    "wh65_rssi": "wh65rssi",
+    "wh68_rssi": "wh68rssi",
+    "wh69_rssi": "wh69rssi",
+    "wh80_rssi": "wh80rssi",
+    "wh90_rssi": "wh90rssi",
+    "wh85_rssi": "wh85rssi",
+    "ws80_rssi": "wh80rssi",
+    "ws90_rssi": "wh90rssi",
+    "ws85_rssi": "wh85rssi",
+    "wn64_rssi": "wn64rssi",
+    "wqt01_rssi": "wqt01rssi",
+    "thi_ch1": "thi_ch1",
+    "thi_ch2": "thi_ch2",
+    "thi_ch3": "thi_ch3",
+    "thi_ch4": "thi_ch4",
+    "depth_ch1": "depth_ch1",
+    "depth_ch2": "depth_ch2",
+    "depth_ch3": "depth_ch3",
+    "depth_ch4": "depth_ch4",
+    "air_ch1": "air_ch1",
+    "air_ch2": "air_ch2",
+    "air_ch3": "air_ch3",
+    "air_ch4": "air_ch4",
+    "ldsbatt1": "ldsbatt1",
+    "ldsbatt2": "ldsbatt2",
+    "ldsbatt3": "ldsbatt3",
+    "ldsbatt4": "ldsbatt4",
+    "ldsheat_ch1": "ldsheat_ch1",
+    "ldsheat_ch2": "ldsheat_ch2",
+    "ldsheat_ch3": "ldsheat_ch3",
+    "ldsheat_ch4": "ldsheat_ch4",
+    "noise_ch1": "noise_ch1",
+    "noise_ch2": "noise_ch2",
+    "noise_ch3": "noise_ch3",
+    "noise_ch4": "noise_ch4",
+    "peak_ch1": "peak_ch1",
+    "peak_ch2": "peak_ch2",
+    "peak_ch3": "peak_ch3",
+    "peak_ch4": "peak_ch4",
+    "ldspw_ch1": "ldspw_ch1",
+    "ldspw_ch2": "ldspw_ch2",
+    "ldspw_ch3": "ldspw_ch3",
+    "ldspw_ch4": "ldspw_ch4",
+    "vpd": "vpd",
+    "fdewptf": "dewptf",
+    "fwindchillf": "windchillf",
+    "ffeelslikef": "feelslikef",
+    "fheatindexf": "heatindexf",
+    "fwindspdmph_avg10m": "windspdmph_avg10m",
+    "fwinddir_avg10m": "winddir_avg10m",
+    "fwindgustmph_max10m": "windgustmph_max10m",
+    "fwindrun": "windrun",
+    "fpm25_AQI_ch1": "pm25_AQI_ch1",
+    "fpm25_AQI_ch2": "pm25_AQI_ch2",
+    "fpm25_AQI_ch3": "pm25_AQI_ch3",
+    "fpm25_AQI_ch4": "pm25_AQI_ch4",
+    "fpm25_AQI_co2": "pm25_AQI_co2",
+    "fpm10_AQI_co2": "pm10_AQI_co2",
+    "fpm25_AQI_avg_24h_ch1": "pm25_AQI_avg_24h_ch1",
+    "fpm25_AQI_avg_24h_ch2": "pm25_AQI_avg_24h_ch2",
+    "fpm25_AQI_avg_24h_ch3": "pm25_AQI_avg_24h_ch3",
+    "fpm25_AQI_avg_24h_ch4": "pm25_AQI_avg_24h_ch4",
+    "fpm25_AQI_24h_co2": "pm25_AQI_24h_co2",
+    "fpm10_AQI_24h_co2": "pm10_AQI_24h_co2",
+    "fsunhours": "sunhours",
+    "fsunshine": "sunshine",
+    "radcompensation": "radcompensation",
+    "newVersion": "newVersion",
+    "upgrade": "upgrade",
+    "rain_source": "rainFallPriority",
+    "rain_day_reset": "rstRainDay",
+    "rain_week_reset": "rstRainWeek",
+    "rain_annual_reset": "rstRainYear",
+    "raingain": "rainGain",
+    "piezo": "piezo",
+    "charge_stat": "charge",
+    "consoleext_batt": "ext_volt",
+    "consolebattp": "consolebattp",
+    "bgt": "bgt",
+    "wbgt": "wbgt",
+    "wbgtcat": "wbgtcat",
+    "bgtbatt": "bgtbatt",
+    "wn64batt": "wn64batt",
+    "wqt01batt": "wqt01batt",
+    "lightning_last_det_time": "lightning_time",
+    "extraTemp17": "tf_ch9",
+    "extraTemp18": "tf_ch10",
+    "extraTemp19": "tf_ch11",
+    "extraTemp20": "tf_ch12",
+    "extraTemp21": "tf_ch13",
+    "extraTemp22": "tf_ch14",
+    "extraTemp23": "tf_ch15",
+    "extraTemp24": "tf_ch16"
+  },
+  "observation_groups": {
+    "micro_siemens_per_centimeter": "group_usiecm",
+    "co2": "group_fraction",
+    "co2_Temp": "group_temperature",
+    "co2_Hum": "group_percent",
+    "co2_24h": "group_fraction",
+    "co2in": "group_fraction",
+    "co2in_24h": "group_fraction",
+    "pm1_0": "group_concentration",
+    "pm4_0": "group_concentration",
+    "pm2_5": "group_concentration",
+    "pm10_0": "group_concentration",
+    "pm25_1": "group_concentration",
+    "pm25_2": "group_concentration",
+    "pm25_3": "group_concentration",
+    "pm25_4": "group_concentration",
+    "pm1_24h_co2": "group_concentration",
+    "pm4_24h_co2": "group_concentration",
+    "pm25_24h_co2": "group_concentration",
+    "pm10_24h_co2": "group_concentration",
+    "pm25_avg_24h_ch1": "group_concentration",
+    "pm25_avg_24h_ch2": "group_concentration",
+    "pm25_avg_24h_ch3": "group_concentration",
+    "pm25_avg_24h_ch4": "group_concentration",
+    "soilTemp1": "group_temperature",
+    "soilTemp2": "group_temperature",
+    "soilTemp3": "group_temperature",
+    "soilTemp4": "group_temperature",
+    "soilTemp5": "group_temperature",
+    "soilTemp6": "group_temperature",
+    "soilTemp7": "group_temperature",
+    "soilTemp8": "group_temperature",
+    "soilmTemp1": "group_temperature",
+    "soilmTemp2": "group_temperature",
+    "soilmTemp3": "group_temperature",
+    "soilmTemp4": "group_temperature",
+    "soilmTemp5": "group_temperature",
+    "soilmTemp6": "group_temperature",
+    "soilmTemp7": "group_temperature",
+    "soilmTemp8": "group_temperature",
+    "soilmTemp9": "group_temperature",
+    "soilmTemp10": "group_temperature",
+    "soilmTemp11": "group_temperature",
+    "soilmTemp12": "group_temperature",
+    "soilmTemp13": "group_temperature",
+    "soilmTemp14": "group_temperature",
+    "soilmTemp15": "group_temperature",
+    "soilmTemp16": "group_temperature",
+    "leafWet1": "group_percent",
+    "leafWet2": "group_percent",
+    "leafWet3": "group_percent",
+    "leafWet4": "group_percent",
+    "leafWet5": "group_percent",
+    "leafWet6": "group_percent",
+    "leafWet7": "group_percent",
+    "leafWet8": "group_percent",
+    "soilMoist1": "group_percent",
+    "soilMoist2": "group_percent",
+    "soilMoist3": "group_percent",
+    "soilMoist4": "group_percent",
+    "soilMoist5": "group_percent",
+    "soilMoist6": "group_percent",
+    "soilMoist7": "group_percent",
+    "soilMoist8": "group_percent",
+    "soilMoist9": "group_percent",
+    "soilMoist10": "group_percent",
+    "soilMoist11": "group_percent",
+    "soilMoist12": "group_percent",
+    "soilMoist13": "group_percent",
+    "soilMoist14": "group_percent",
+    "soilMoist15": "group_percent",
+    "soilMoist16": "group_percent",
+    "lightning_distance": "group_distance",
+    "lightning_dist": "group_distance",
+    "lightning_disturber_count": "group_time",
+    "lightning_strike_count": "group_count",
+    "lightning_num": "group_count",
+    "runtime": "group_deltatime",
+    "rainrate": "group_rainrate",
+    "eventRain": "group_rain",
+    "weekRain": "group_rain",
+    "raintotal": "group_rain",
+    "rainBatteryStatus": "group_count",
+    "hailBatteryStatus": "group_count",
+    "windBatteryStatus": "group_count",
+    "ws80_batt": "group_volt",
+    "ws90_batt": "group_volt",
+    "ws1900batt": "group_volt",
+    "console_batt": "group_volt",
+    "consoleext_batt": "group_volt",
+    "charge_stat": "group_count",
+    "consolebattp": "group_percent",
+    "ws85_batt": "group_volt",
+    "rrain_piezo": "group_rainrate",
+    "erain_piezo": "group_rain",
+    "hrain_piezo": "group_rain",
+    "drain_piezo": "group_rain",
+    "wrain_piezo": "group_rain",
+    "mrain_piezo": "group_rain",
+    "yrain_piezo": "group_rain",
+    "train_piezo": "group_rain",
+    "total_piezo": "group_rain",
+    "rain_piezo": "group_rain",
+    "p_rain": "group_rain",
+    "rain24": "group_rain",
+    "rain24_piezo": "group_rain",
+    "p_rainrate": "group_rainrate",
+    "ws90cap_volt": "group_volt",
+    "ws85cap_volt": "group_volt",
+    "ws90_ver": "group_count",
+    "ws85_ver": "group_count",
+    "soilMoistBatt1": "group_volt",
+    "soilMoistBatt2": "group_volt",
+    "soilMoistBatt3": "group_volt",
+    "soilMoistBatt4": "group_volt",
+    "soilMoistBatt5": "group_volt",
+    "soilMoistBatt6": "group_volt",
+    "soilMoistBatt7": "group_volt",
+    "soilMoistBatt8": "group_volt",
+    "soilMoistBatt9": "group_volt",
+    "soilMoistBatt10": "group_volt",
+    "soilMoistBatt11": "group_volt",
+    "soilMoistBatt12": "group_volt",
+    "soilMoistBatt13": "group_volt",
+    "soilMoistBatt14": "group_volt",
+    "soilMoistBatt15": "group_volt",
+    "soilMoistBatt16": "group_volt",
+    "soilTempBatt1": "group_volt",
+    "soilTempBatt2": "group_volt",
+    "soilTempBatt3": "group_volt",
+    "soilTempBatt4": "group_volt",
+    "soilTempBatt5": "group_volt",
+    "soilTempBatt6": "group_volt",
+    "soilTempBatt7": "group_volt",
+    "soilTempBatt8": "group_volt",
+    "soilTempBatt9": "group_volt",
+    "soilTempBatt10": "group_volt",
+    "soilTempBatt11": "group_volt",
+    "soilTempBatt12": "group_volt",
+    "soilTempBatt13": "group_volt",
+    "soilTempBatt14": "group_volt",
+    "soilTempBatt15": "group_volt",
+    "soilTempBatt16": "group_volt",
+    "leafWetBatt1": "group_volt",
+    "leafWetBatt2": "group_volt",
+    "leafWetBatt3": "group_volt",
+    "leafWetBatt4": "group_volt",
+    "leafWetBatt5": "group_volt",
+    "leafWetBatt6": "group_volt",
+    "leafWetBatt7": "group_volt",
+    "leafWetBatt8": "group_volt",
+    "maxdailygust": "group_speed2",
+    "winddir_avg10m": "group_direction",
+    "windDir10": "group_direction",
+    "windspdmph_avg10m": "group_speed2",
+    "co2_Batt": "group_count",
+    "pm25_Batt1": "group_count",
+    "pm25_Batt2": "group_count",
+    "pm25_Batt3": "group_count",
+    "pm25_Batt4": "group_count",
+    "leak_1": "group_count",
+    "leak_2": "group_count",
+    "leak_3": "group_count",
+    "leak_4": "group_count",
+    "leak_Batt1": "group_count",
+    "leak_Batt2": "group_count",
+    "leak_Batt3": "group_count",
+    "leak_Batt4": "group_count",
+    "lightning_Batt": "group_count",
+    "wh24_batt": "group_count",
+    "wh25_batt": "group_count",
+    "wh26_batt": "group_count",
+    "wh65_batt": "group_count",
+    "wh68_batt": "group_count",
+    "soilad1": "group_count",
+    "soilad2": "group_count",
+    "soilad3": "group_count",
+    "soilad4": "group_count",
+    "soilad5": "group_count",
+    "soilad6": "group_count",
+    "soilad7": "group_count",
+    "soilad8": "group_count",
+    "soilad9": "group_count",
+    "soilad10": "group_count",
+    "soilad11": "group_count",
+    "soilad12": "group_count",
+    "soilad13": "group_count",
+    "soilad14": "group_count",
+    "soilad15": "group_count",
+    "soilad16": "group_count",
+    "soilECad1": "group_count",
+    "soilECad2": "group_count",
+    "soilECad3": "group_count",
+    "soilECad4": "group_count",
+    "soilECad5": "group_count",
+    "soilECad6": "group_count",
+    "soilECad7": "group_count",
+    "soilECad8": "group_count",
+    "soilECad9": "group_count",
+    "soilECad10": "group_count",
+    "soilECad11": "group_count",
+    "soilECad12": "group_count",
+    "soilECad13": "group_count",
+    "soilECad14": "group_count",
+    "soilECad15": "group_count",
+    "soilECad16": "group_count",
+    "soilEC1": "group_usiecm",
+    "soilEC2": "group_usiecm",
+    "soilEC3": "group_usiecm",
+    "soilEC4": "group_usiecm",
+    "soilEC5": "group_usiecm",
+    "soilEC6": "group_usiecm",
+    "soilEC7": "group_usiecm",
+    "soilEC8": "group_usiecm",
+    "soilEC9": "group_usiecm",
+    "soilEC10": "group_usiecm",
+    "soilEC11": "group_usiecm",
+    "soilEC12": "group_usiecm",
+    "soilEC13": "group_usiecm",
+    "soilEC14": "group_usiecm",
+    "soilEC15": "group_usiecm",
+    "soilEC16": "group_usiecm",
+    "wn20_rssi": "group_dbm",
+    "wh24_rssi": "group_dbm",
+    "wh25_rssi": "group_dbm",
+    "wh26_rssi": "group_dbm",
+    "wh31_ch1_rssi": "group_dbm",
+    "wh31_ch2_rssi": "group_dbm",
+    "wh31_ch3_rssi": "group_dbm",
+    "wh31_ch4_rssi": "group_dbm",
+    "wh31_ch5_rssi": "group_dbm",
+    "wh31_ch6_rssi": "group_dbm",
+    "wh31_ch7_rssi": "group_dbm",
+    "wh31_ch8_rssi": "group_dbm",
+    "wn34_ch1_rssi": "group_dbm",
+    "wn34_ch2_rssi": "group_dbm",
+    "wn34_ch3_rssi": "group_dbm",
+    "wn34_ch4_rssi": "group_dbm",
+    "wn34_ch5_rssi": "group_dbm",
+    "wn34_ch6_rssi": "group_dbm",
+    "wn34_ch7_rssi": "group_dbm",
+    "wn34_ch8_rssi": "group_dbm",
+    "wn34_ch9_rssi": "group_dbm",
+    "wn34_ch10_rssi": "group_dbm",
+    "wn34_ch11_rssi": "group_dbm",
+    "wn34_ch12_rssi": "group_dbm",
+    "wn34_ch13_rssi": "group_dbm",
+    "wn34_ch14_rssi": "group_dbm",
+    "wn34_ch15_rssi": "group_dbm",
+    "wn34_ch16_rssi": "group_dbm",
+    "wn35_ch1_rssi": "group_dbm",
+    "wn35_ch2_rssi": "group_dbm",
+    "wn35_ch3_rssi": "group_dbm",
+    "wn35_ch4_rssi": "group_dbm",
+    "wn35_ch5_rssi": "group_dbm",
+    "wn35_ch6_rssi": "group_dbm",
+    "wn35_ch7_rssi": "group_dbm",
+    "wn35_ch8_rssi": "group_dbm",
+    "wn38_rssi": "group_dbm",
+    "wh40_rssi": "group_dbm",
+    "wh41_ch1_rssi": "group_dbm",
+    "wh41_ch2_rssi": "group_dbm",
+    "wh41_ch3_rssi": "group_dbm",
+    "wh41_ch4_rssi": "group_dbm",
+    "wh45_rssi": "group_dbm",
+    "wh51_ch1_rssi": "group_dbm",
+    "wh51_ch2_rssi": "group_dbm",
+    "wh51_ch3_rssi": "group_dbm",
+    "wh51_ch4_rssi": "group_dbm",
+    "wh51_ch5_rssi": "group_dbm",
+    "wh51_ch6_rssi": "group_dbm",
+    "wh51_ch7_rssi": "group_dbm",
+    "wh51_ch8_rssi": "group_dbm",
+    "wh51_ch9_rssi": "group_dbm",
+    "wh51_ch10_rssi": "group_dbm",
+    "wh51_ch11_rssi": "group_dbm",
+    "wh51_ch12_rssi": "group_dbm",
+    "wh51_ch13_rssi": "group_dbm",
+    "wh51_ch14_rssi": "group_dbm",
+    "wh51_ch15_rssi": "group_dbm",
+    "wh51_ch16_rssi": "group_dbm",
+    "wh54_ch1_rssi": "group_dbm",
+    "wh54_ch2_rssi": "group_dbm",
+    "wh54_ch3_rssi": "group_dbm",
+    "wh54_ch4_rssi": "group_dbm",
+    "wh55_ch1_rssi": "group_dbm",
+    "wh55_ch2_rssi": "group_dbm",
+    "wh55_ch3_rssi": "group_dbm",
+    "wh55_ch4_rssi": "group_dbm",
+    "wh57_rssi": "group_dbm",
+    "wh65_rssi": "group_dbm",
+    "wh68_rssi": "group_dbm",
+    "wh69_rssi": "group_dbm",
+    "wh80_rssi": "group_dbm",
+    "wh85_rssi": "group_dbm",
+    "wh90_rssi": "group_dbm",
+    "ws80_rssi": "group_dbm",
+    "ws85_rssi": "group_dbm",
+    "ws90_rssi": "group_dbm",
+    "wn64_rssi": "group_dbm",
+    "wqt01_rssi": "group_dbm",
+    "ldsbatt1": "group_volt",
+    "ldsbatt2": "group_volt",
+    "ldsbatt3": "group_volt",
+    "ldsbatt4": "group_volt",
+    "ldsheat_ch1": "group_count",
+    "ldsheat_ch2": "group_count",
+    "ldsheat_ch3": "group_count",
+    "ldsheat_ch4": "group_count",
+    "co2_batt6": "group_count",
+    "srain_piezo": "group_count",
+    "heap": "group_data",
+    "pb": "group_data",
+    "ws_interval": "group_deltatime",
+    "fdewptf": "group_temperature",
+    "fwindchillf": "group_temperature",
+    "ffeelslikef": "group_temperature",
+    "fheatindexf": "group_temperature",
+    "fwindspdmph_avg10m": "group_speed2",
+    "fwinddir_avg10m": "group_direction",
+    "fwindgustmph_max10m": "group_speed2",
+    "fwindrun": "group_distance",
+    "fpm25_AQI_ch1": "group_count",
+    "fpm25_AQI_ch2": "group_count",
+    "fpm25_AQI_ch3": "group_count",
+    "fpm25_AQI_ch4": "group_count",
+    "fpm25_AQI_co2": "group_count",
+    "fpm10_AQI_co2": "group_count",
+    "fpm25_AQI_avg_24h_ch1": "group_count",
+    "fpm25_AQI_avg_24h_ch2": "group_count",
+    "fpm25_AQI_avg_24h_ch3": "group_count",
+    "fpm25_AQI_avg_24h_ch4": "group_count",
+    "fpm25_AQI_24h_co2": "group_count",
+    "fpm10_AQI_24h_co2": "group_count",
+    "fsunshine": "group_count",
+    "radcompensation": "group_count",
+    "upgrade": "group_count",
+    "newVersion": "group_count",
+    "rainFallPriority": "group_count",
+    "rainGain": "group_count",
+    "piezo": "group_count",
+    "rain1_gain": "group_count",
+    "rain2_gain": "group_count",
+    "rain3_gain": "group_count",
+    "rain4_gain": "group_count",
+    "rain5_gain": "group_count",
+    "fsunhours": "group_sunhours",
+    "thi_ch1": "group_lengthmm",
+    "thi_ch2": "group_lengthmm",
+    "thi_ch3": "group_lengthmm",
+    "thi_ch4": "group_lengthmm",
+    "depth_ch1": "group_lengthmm",
+    "depth_ch2": "group_lengthmm",
+    "depth_ch3": "group_lengthmm",
+    "depth_ch4": "group_lengthmm",
+    "air_ch1": "group_lengthmm",
+    "air_ch2": "group_lengthmm",
+    "air_ch3": "group_lengthmm",
+    "air_ch4": "group_lengthmm",
+    "vpd": "group_pressurevpd",
+    "bgt": "group_temperature",
+    "wbgt": "group_temperature",
+    "wbgtcat": "group_count",
+    "bgtbatt": "group_volt",
+    "wn64batt": "group_volt",
+    "wqt01batt": "group_volt",
+    "lightning_last_det_time": "group_time",
+    "extraTemp17": "group_temperature",
+    "extraTemp18": "group_temperature",
+    "extraTemp19": "group_temperature",
+    "extraTemp20": "group_temperature",
+    "extraTemp21": "group_temperature",
+    "extraTemp22": "group_temperature",
+    "extraTemp23": "group_temperature",
+    "extraTemp24": "group_temperature",
+    "consBatteryVoltage": "group_volt",
+    "hail": "group_rain",
+    "hailRate": "group_rainrate",
+    "rain_source": "group_count",
+    "raingain": "group_count",
+    "txBatteryStatus": "group_count",
+    "batteryStatus1": "group_count",
+    "batteryStatus2": "group_count",
+    "batteryStatus3": "group_count",
+    "batteryStatus4": "group_count",
+    "batteryStatus5": "group_count",
+    "batteryStatus6": "group_count",
+    "batteryStatus7": "group_count",
+    "batteryStatus8": "group_count",
+    "outTempBatteryStatus": "group_count",
+    "inTempBatteryStatus": "group_count",
+    "gain0": "group_count",
+    "gain1": "group_count",
+    "gain2": "group_count",
+    "gain3": "group_count",
+    "gain4": "group_count",
+    "gain5": "group_count",
+    "gain6": "group_count",
+    "gain7": "group_count",
+    "gain8": "group_count",
+    "gain9": "group_count",
+    "wh24_sig": "group_count",
+    "wh25_sig": "group_count",
+    "wh26_sig": "group_count",
+    "wh31_ch1_sig": "group_count",
+    "wh31_ch2_sig": "group_count",
+    "wh31_ch3_sig": "group_count",
+    "wh31_ch4_sig": "group_count",
+    "wh31_ch5_sig": "group_count",
+    "wh31_ch6_sig": "group_count",
+    "wh31_ch7_sig": "group_count",
+    "wh31_ch8_sig": "group_count",
+    "wn34_ch1_sig": "group_count",
+    "wn34_ch2_sig": "group_count",
+    "wn34_ch3_sig": "group_count",
+    "wn34_ch4_sig": "group_count",
+    "wn34_ch5_sig": "group_count",
+    "wn34_ch6_sig": "group_count",
+    "wn34_ch7_sig": "group_count",
+    "wn34_ch8_sig": "group_count",
+    "wn34_ch9_sig": "group_count",
+    "wn34_ch10_sig": "group_count",
+    "wn34_ch11_sig": "group_count",
+    "wn34_ch12_sig": "group_count",
+    "wn34_ch13_sig": "group_count",
+    "wn34_ch14_sig": "group_count",
+    "wn34_ch15_sig": "group_count",
+    "wn34_ch16_sig": "group_count",
+    "wn35_ch1_sig": "group_count",
+    "wn35_ch2_sig": "group_count",
+    "wn35_ch3_sig": "group_count",
+    "wn35_ch4_sig": "group_count",
+    "wn35_ch5_sig": "group_count",
+    "wn35_ch6_sig": "group_count",
+    "wn35_ch7_sig": "group_count",
+    "wn35_ch8_sig": "group_count",
+    "wn38_sig": "group_count",
+    "wh40_sig": "group_count",
+    "wh41_ch1_sig": "group_count",
+    "wh41_ch2_sig": "group_count",
+    "wh41_ch3_sig": "group_count",
+    "wh41_ch4_sig": "group_count",
+    "wh45_sig": "group_count",
+    "wh51_ch1_sig": "group_count",
+    "wh51_ch2_sig": "group_count",
+    "wh51_ch3_sig": "group_count",
+    "wh51_ch4_sig": "group_count",
+    "wh51_ch5_sig": "group_count",
+    "wh51_ch6_sig": "group_count",
+    "wh51_ch7_sig": "group_count",
+    "wh51_ch8_sig": "group_count",
+    "wh51_ch9_sig": "group_count",
+    "wh51_ch10_sig": "group_count",
+    "wh51_ch11_sig": "group_count",
+    "wh51_ch12_sig": "group_count",
+    "wh51_ch13_sig": "group_count",
+    "wh51_ch14_sig": "group_count",
+    "wh51_ch15_sig": "group_count",
+    "wh51_ch16_sig": "group_count",
+    "wh55_ch1_sig": "group_count",
+    "wh55_ch2_sig": "group_count",
+    "wh55_ch3_sig": "group_count",
+    "wh55_ch4_sig": "group_count",
+    "wh57_sig": "group_count",
+    "wh65_sig": "group_count",
+    "wh68_sig": "group_count",
+    "wh69_sig": "group_count",
+    "ws80_sig": "group_count",
+    "ws85_sig": "group_count",
+    "ws90_sig": "group_count",
+    "wh54_ch1_sig": "group_count",
+    "wh54_ch2_sig": "group_count",
+    "wh54_ch3_sig": "group_count",
+    "wh54_ch4_sig": "group_count",
+    "wn64_sig": "group_count",
+    "wqt01_sig": "group_count",
+    "rain_day_reset": "group_count",
+    "rain_week_reset": "group_count",
+    "rain_annual_reset": "group_count"
+  },
+  "unit_systems": {
+    "USUnits": {
+      "group_dbm": "dBm",
+      "group_usiecm": "micro_siemens_per_centimeter",
+      "group_sunhours": "sunhours",
+      "group_lengthmm": "mm",
+      "group_pressurevpd": "inHg"
+    },
+    "MetricUnits": {
+      "group_dbm": "dBm",
+      "group_usiecm": "micro_siemens_per_centimeter",
+      "group_sunhours": "sunhours",
+      "group_lengthmm": "mm",
+      "group_pressurevpd": "kPa"
+    },
+    "MetricWXUnits": {
+      "group_dbm": "dBm",
+      "group_usiecm": "micro_siemens_per_centimeter",
+      "group_sunhours": "sunhours",
+      "group_lengthmm": "mm",
+      "group_pressurevpd": "kPa"
+    }
+  },
+  "unit_formats": {
+    "dBm": "%.0f",
+    "micro_siemens_per_centimeter": "%.0f",
+    "sunhours": "%.2f",
+    "microgram_per_meter_cubed": "%.1f",
+    "volt": "%.2f",
+    "kPa": "%.3f"
+  },
+  "unit_labels": {
+    "dBm": " dBm",
+    "micro_siemens_per_centimeter": " µS/cm",
+    "sunhours": " h",
+    "thi_ch1": "mm",
+    "thi_ch2": "mm",
+    "thi_ch3": "mm",
+    "thi_ch4": "mm",
+    "depth_ch1": "mm",
+    "depth_ch2": "mm",
+    "depth_ch3": "mm",
+    "depth_ch4": "mm",
+    "air_ch1": "mm",
+    "air_ch2": "mm",
+    "air_ch3": "mm",
+    "air_ch4": "mm"
+  },
+  "protocols": {
+    "ecowitt-client": {
+      "labels": {
+        "baromrelin": "barometer",
+        "baromabsin": "pressure",
+        "humidity": "humidity_out",
+        "humidityin": "humidity_in",
+        "tempf": "temperature_out",
+        "tempinf": "temperature_in",
+        "temp1f": "temperature_1",
+        "temp2f": "temperature_2",
+        "temp3f": "temperature_3",
+        "temp4f": "temperature_4",
+        "temp5f": "temperature_5",
+        "temp6f": "temperature_6",
+        "temp7f": "temperature_7",
+        "temp8f": "temperature_8",
+        "humidity1": "humidity_1",
+        "humidity2": "humidity_2",
+        "humidity3": "humidity_3",
+        "humidity4": "humidity_4",
+        "humidity5": "humidity_5",
+        "humidity6": "humidity_6",
+        "humidity7": "humidity_7",
+        "humidity8": "humidity_8",
+        "batt1": "battery_1",
+        "batt2": "battery_2",
+        "batt3": "battery_3",
+        "batt4": "battery_4",
+        "batt5": "battery_5",
+        "batt6": "battery_6",
+        "batt7": "battery_7",
+        "batt8": "battery_8",
+        "soilmoisture1": "soil_moisture_1",
+        "soilmoisture2": "soil_moisture_2",
+        "soilmoisture3": "soil_moisture_3",
+        "soilmoisture4": "soil_moisture_4",
+        "soilmoisture5": "soil_moisture_5",
+        "soilmoisture6": "soil_moisture_6",
+        "soilmoisture7": "soil_moisture_7",
+        "soilmoisture8": "soil_moisture_8",
+        "soilmoisture9": "soil_moisture_9",
+        "soilmoisture10": "soil_moisture_10",
+        "soilmoisture11": "soil_moisture_11",
+        "soilmoisture12": "soil_moisture_12",
+        "soilmoisture13": "soil_moisture_13",
+        "soilmoisture14": "soil_moisture_14",
+        "soilmoisture15": "soil_moisture_15",
+        "soilmoisture16": "soil_moisture_16",
+        "soil_ec_hum1": "soil_moisture_1",
+        "soil_ec_hum2": "soil_moisture_2",
+        "soil_ec_hum3": "soil_moisture_3",
+        "soil_ec_hum4": "soil_moisture_4",
+        "soil_ec_hum5": "soil_moisture_5",
+        "soil_ec_hum6": "soil_moisture_6",
+        "soil_ec_hum7": "soil_moisture_7",
+        "soil_ec_hum8": "soil_moisture_8",
+        "soil_ec_hum9": "soil_moisture_9",
+        "soil_ec_hum10": "soil_moisture_10",
+        "soil_ec_hum11": "soil_moisture_11",
+        "soil_ec_hum12": "soil_moisture_12",
+        "soil_ec_hum13": "soil_moisture_13",
+        "soil_ec_hum14": "soil_moisture_14",
+        "soil_ec_hum15": "soil_moisture_15",
+        "soil_ec_hum16": "soil_moisture_16",
+        "soil_ec_temp1": "soilmTemp1",
+        "soil_ec_temp2": "soilmTemp2",
+        "soil_ec_temp3": "soilmTemp3",
+        "soil_ec_temp4": "soilmTemp4",
+        "soil_ec_temp5": "soilmTemp5",
+        "soil_ec_temp6": "soilmTemp6",
+        "soil_ec_temp7": "soilmTemp7",
+        "soil_ec_temp8": "soilmTemp8",
+        "soil_ec_temp9": "soilmTemp9",
+        "soil_ec_temp10": "soilmTemp10",
+        "soil_ec_temp11": "soilmTemp11",
+        "soil_ec_temp12": "soilmTemp12",
+        "soil_ec_temp13": "soilmTemp13",
+        "soil_ec_temp14": "soilmTemp14",
+        "soil_ec_temp15": "soilmTemp15",
+        "soil_ec_temp16": "soilmTemp16",
+        "soilbatt1": "soilbatt1",
+        "soilbatt2": "soilbatt2",
+        "soilbatt3": "soilbatt3",
+        "soilbatt4": "soilbatt4",
+        "soilbatt5": "soilbatt5",
+        "soilbatt6": "soilbatt6",
+        "soilbatt7": "soilbatt7",
+        "soilbatt8": "soilbatt8",
+        "soilbatt9": "soilbatt9",
+        "soilbatt10": "soilbatt10",
+        "soilbatt11": "soilbatt11",
+        "soilbatt12": "soilbatt12",
+        "soilbatt13": "soilbatt13",
+        "soilbatt14": "soilbatt14",
+        "soilbatt15": "soilbatt15",
+        "soilbatt16": "soilbatt16",
+        "soil_ec_batt1": "soilbatt1",
+        "soil_ec_batt2": "soilbatt2",
+        "soil_ec_batt3": "soilbatt3",
+        "soil_ec_batt4": "soilbatt4",
+        "soil_ec_batt5": "soilbatt5",
+        "soil_ec_batt6": "soilbatt6",
+        "soil_ec_batt7": "soilbatt7",
+        "soil_ec_batt8": "soilbatt8",
+        "soil_ec_batt9": "soilbatt9",
+        "soil_ec_batt10": "soilbatt10",
+        "soil_ec_batt11": "soilbatt11",
+        "soil_ec_batt12": "soilbatt12",
+        "soil_ec_batt13": "soilbatt13",
+        "soil_ec_batt14": "soilbatt14",
+        "soil_ec_batt15": "soilbatt15",
+        "soil_ec_batt16": "soilbatt16",
+        "windspeedmph": "wind_speed",
+        "windgustmph": "wind_gust",
+        "winddir": "wind_dir",
+        "solarradiation": "solar_radiation",
+        "uv": "uv",
+        "wh25batt": "wh25batt",
+        "wh26batt": "wh26batt",
+        "wh40batt": "wh40batt",
+        "wh57batt": "wh57batt",
+        "wh65batt": "wh65batt",
+        "wh68batt": "wh65batt",
+        "wh80batt": "wh80batt",
+        "wh90batt": "wh90batt",
+        "wh85batt": "wh85batt",
+        "pm25_ch1": "pm25_ch1",
+        "pm25_ch2": "pm25_ch2",
+        "pm25_ch3": "pm25_ch3",
+        "pm25_ch4": "pm25_ch4",
+        "pm25batt1": "pm25batt1",
+        "pm25batt2": "pm25batt2",
+        "pm25batt3": "pm25batt3",
+        "pm25batt4": "pm25batt4",
+        "lightning": "lightning",
+        "lightning_time": "lightning_time",
+        "lightning_num": "lightning_num",
+        "leak_ch1": "leak_ch1",
+        "leak_ch2": "leak_ch2",
+        "leak_ch3": "leak_ch3",
+        "leak_ch4": "leak_ch4",
+        "leakbatt1": "leakbatt1",
+        "leakbatt2": "leakbatt2",
+        "leakbatt3": "leakbatt3",
+        "leakbatt4": "leakbatt4",
+        "co2": "co2",
+        "co2_24h": "co2_24h",
+        "co2in": "co2in",
+        "co2in_24h": "co2in_24h",
+        "co2_batt": "co2_batt",
+        "co2_batt6": "co2_batt6",
+        "tf_co2": "tf_co2",
+        "humi_co2": "humi_co2",
+        "pm1_co2": "pm1_co2",
+        "pm1_24h_co2": "pm1_24h_co2",
+        "pm4_co2": "pm4_co2",
+        "pm4_24h_co2": "pm4_24h_co2",
+        "pm25_co2": "pm25_co2",
+        "pm25_24h_co2": "pm25_24h_co2",
+        "pm10_co2": "pm10_co2",
+        "pm10_24h_co2": "pm10_24h_co2",
+        "tf_ch1": "tf_ch1",
+        "tf_ch2": "tf_ch2",
+        "tf_ch3": "tf_ch3",
+        "tf_ch4": "tf_ch4",
+        "tf_ch5": "tf_ch5",
+        "tf_ch6": "tf_ch6",
+        "tf_ch7": "tf_ch7",
+        "tf_ch8": "tf_ch8",
+        "tf_ch9": "tf_ch9",
+        "tf_ch10": "tf_ch10",
+        "tf_ch11": "tf_ch11",
+        "tf_ch12": "tf_ch12",
+        "tf_ch13": "tf_ch13",
+        "tf_ch14": "tf_ch14",
+        "tf_ch15": "tf_ch15",
+        "tf_ch16": "tf_ch16",
+        "tf_batt1": "tf_batt1",
+        "tf_batt2": "tf_batt2",
+        "tf_batt3": "tf_batt3",
+        "tf_batt4": "tf_batt4",
+        "tf_batt5": "tf_batt5",
+        "tf_batt6": "tf_batt6",
+        "tf_batt7": "tf_batt7",
+        "tf_batt8": "tf_batt8",
+        "tf_batt9": "tf_batt9",
+        "tf_batt10": "tf_batt10",
+        "tf_batt11": "tf_batt11",
+        "tf_batt12": "tf_batt12",
+        "tf_batt13": "tf_batt13",
+        "tf_batt14": "tf_batt14",
+        "tf_batt15": "tf_batt15",
+        "tf_batt16": "tf_batt16",
+        "leafwetness_ch1": "leafwetness_ch1",
+        "leafwetness_ch2": "leafwetness_ch2",
+        "leafwetness_ch3": "leafwetness_ch3",
+        "leafwetness_ch4": "leafwetness_ch4",
+        "leafwetness_ch5": "leafwetness_ch5",
+        "leafwetness_ch6": "leafwetness_ch6",
+        "leafwetness_ch7": "leafwetness_ch7",
+        "leafwetness_ch8": "leafwetness_ch8",
+        "leaf_batt1": "leaf_batt1",
+        "leaf_batt2": "leaf_batt2",
+        "leaf_batt3": "leaf_batt3",
+        "leaf_batt4": "leaf_batt4",
+        "leaf_batt5": "leaf_batt5",
+        "leaf_batt6": "leaf_batt6",
+        "leaf_batt7": "leaf_batt7",
+        "leaf_batt8": "leaf_batt8",
+        "maxdailygust": "maxdailygust",
+        "winddir_avg10m": "winddir_avg10m",
+        "windspdmph_avg10m": "windspdmph_avg10m",
+        "pm25_avg_24h_ch1": "pm25_avg_24h_ch1",
+        "pm25_avg_24h_ch2": "pm25_avg_24h_ch2",
+        "pm25_avg_24h_ch3": "pm25_avg_24h_ch3",
+        "pm25_avg_24h_ch4": "pm25_avg_24h_ch4",
+        "eventrainin": "eventrainin",
+        "hourlyrainin": "hourlyrainin",
+        "dailyrainin": "dailyrainin",
+        "last24hrainin": "last24hourlyrainin",
+        "last24hourlyrainin": "last24hourlyrainin",
+        "weeklyrainin": "weeklyrainin",
+        "monthlyrainin": "monthlyrainin",
+        "yearlyrainin": "rainyear",
+        "rainyear": "rainyear",
+        "totalrainin": "rain_total",
+        "rainratein": "rain_rate",
+        "rrain_piezo": "rrain_piezo",
+        "erain_piezo": "erain_piezo",
+        "hrain_piezo": "hrain_piezo",
+        "drain_piezo": "drain_piezo",
+        "last24hrain_piezo": "last24hrain_piezo",
+        "wrain_piezo": "wrain_piezo",
+        "mrain_piezo": "mrain_piezo",
+        "yrain_piezo": "yrain_piezo",
+        "train_piezo": "total_piezo",
+        "total_piezo": "total_piezo",
+        "srain_piezo": "srain_piezo",
+        "ws90_ver": "ws90_ver",
+        "ws85_ver": "ws85_ver",
+        "ws1900batt": "console_batt",
+        "console_batt": "console_batt",
+        "consolebattp": "consolebattp",
+        "ext_volt": "ext_volt",
+        "charge": "charge",
+        "ws90cap_volt": "ws90cap_volt",
+        "ws85cap_volt": "ws85cap_volt",
+        "gain10_piezo": "gain0",
+        "gain20_piezo": "gain1",
+        "gain30_piezo": "gain2",
+        "gain40_piezo": "gain3",
+        "gain50_piezo": "gain4",
+        "runtime": "runtime",
+        "interval": "ws_interval",
+        "stationtype": "stationtype",
+        "model": "model",
+        "soilad1": "soilad1",
+        "soilad2": "soilad2",
+        "soilad3": "soilad3",
+        "soilad4": "soilad4",
+        "soilad5": "soilad5",
+        "soilad6": "soilad6",
+        "soilad7": "soilad7",
+        "soilad8": "soilad8",
+        "soilad9": "soilad9",
+        "soilad10": "soilad10",
+        "soilad11": "soilad11",
+        "soilad12": "soilad12",
+        "soilad13": "soilad13",
+        "soilad14": "soilad14",
+        "soilad15": "soilad15",
+        "soilad16": "soilad16",
+        "soil_ec_ad1": "soilECad1",
+        "soil_ec_ad2": "soilECad2",
+        "soil_ec_ad3": "soilECad3",
+        "soil_ec_ad4": "soilECad4",
+        "soil_ec_ad5": "soilECad5",
+        "soil_ec_ad6": "soilECad6",
+        "soil_ec_ad7": "soilECad7",
+        "soil_ec_ad8": "soilECad8",
+        "soil_ec_ad9": "soilECad9",
+        "soil_ec_ad10": "soilECad10",
+        "soil_ec_ad11": "soilECad11",
+        "soil_ec_ad12": "soilECad12",
+        "soil_ec_ad13": "soilECad13",
+        "soil_ec_ad14": "soilECad14",
+        "soil_ec_ad15": "soilECad15",
+        "soil_ec_ad16": "soilECad16",
+        "soil_ec_hum_ad1": "soilad1",
+        "soil_ec_hum_ad2": "soilad2",
+        "soil_ec_hum_ad3": "soilad3",
+        "soil_ec_hum_ad4": "soilad4",
+        "soil_ec_hum_ad5": "soilad5",
+        "soil_ec_hum_ad6": "soilad6",
+        "soil_ec_hum_ad7": "soilad7",
+        "soil_ec_hum_ad8": "soilad8",
+        "soil_ec_hum_ad9": "soilad9",
+        "soil_ec_hum_ad10": "soilad10",
+        "soil_ec_hum_ad11": "soilad11",
+        "soil_ec_hum_ad12": "soilad12",
+        "soil_ec_hum_ad13": "soilad13",
+        "soil_ec_hum_ad14": "soilad14",
+        "soil_ec_hum_ad15": "soilad15",
+        "soil_ec_hum_ad16": "soilad16",
+        "soil_ec1": "soilEC1",
+        "soil_ec2": "soilEC2",
+        "soil_ec3": "soilEC3",
+        "soil_ec4": "soilEC4",
+        "soil_ec5": "soilEC5",
+        "soil_ec6": "soilEC6",
+        "soil_ec7": "soilEC7",
+        "soil_ec8": "soilEC8",
+        "soil_ec9": "soilEC9",
+        "soil_ec10": "soilEC10",
+        "soil_ec11": "soilEC11",
+        "soil_ec12": "soilEC12",
+        "soil_ec13": "soilEC13",
+        "soil_ec14": "soilEC14",
+        "soil_ec15": "soilEC15",
+        "soil_ec16": "soilEC16",
+        "heap": "heap",
+        "wh24sig": "wh24sig",
+        "wh25sig": "wh25sig",
+        "wh26sig": "wh26sig",
+        "wh31sig1": "wh31sig1",
+        "wh31sig2": "wh31sig2",
+        "wh31sig3": "wh31sig3",
+        "wh31sig4": "wh31sig4",
+        "wh31sig5": "wh31sig5",
+        "wh31sig6": "wh31sig6",
+        "wh31sig7": "wh31sig7",
+        "wh31sig8": "wh31sig8",
+        "wh34sig1": "wh34sig1",
+        "wh34sig2": "wh34sig2",
+        "wh34sig3": "wh34sig3",
+        "wh34sig4": "wh34sig4",
+        "wh34sig5": "wh34sig5",
+        "wh34sig6": "wh34sig6",
+        "wh34sig7": "wh34sig7",
+        "wh34sig8": "wh34sig8",
+        "wh34sig9": "wh34sig9",
+        "wh34sig10": "wh34sig10",
+        "wh34sig11": "wh34sig10",
+        "wh34sig12": "wh34sig11",
+        "wh34sig13": "wh34sig13",
+        "wh34sig14": "wh34sig14",
+        "wh34sig15": "wh34sig15",
+        "wh34sig16": "wh34sig16",
+        "wh35sig1": "wh35sig1",
+        "wh35sig2": "wh35sig2",
+        "wh35sig3": "wh35sig3",
+        "wh35sig4": "wh35sig4",
+        "wh35sig5": "wh35sig5",
+        "wh35sig6": "wh35sig6",
+        "wh35sig7": "wh35sig7",
+        "wh35sig8": "wh35sig8",
+        "wn38sig": "wn38sig",
+        "wh40sig": "wh40sig",
+        "wh41sig1": "wh41sig1",
+        "wh41sig2": "wh41sig2",
+        "wh41sig3": "wh41sig3",
+        "wh41sig4": "wh41sig4",
+        "wh45sig": "wh45sig",
+        "wh51sig1": "wh51sig1",
+        "wh51sig2": "wh51sig2",
+        "wh51sig3": "wh51sig3",
+        "wh51sig4": "wh51sig4",
+        "wh51sig5": "wh51sig5",
+        "wh51sig6": "wh51sig6",
+        "wh51sig7": "wh51sig7",
+        "wh51sig8": "wh51sig8",
+        "wh51sig9": "wh51sig9",
+        "wh51sig10": "wh51sig10",
+        "wh51sig11": "wh51sig11",
+        "wh51sig12": "wh51sig12",
+        "wh51sig13": "wh51sig13",
+        "wh51sig14": "wh51sig14",
+        "wh51sig15": "wh51sig15",
+        "wh51sig16": "wh51sig16",
+        "wh55sig1": "wh55sig1",
+        "wh55sig2": "wh55sig2",
+        "wh55sig3": "wh55sig3",
+        "wh55sig4": "wh55sig4",
+        "wh57sig": "wh57sig",
+        "wh65sig": "wh65sig",
+        "wh68sig": "wh68sig",
+        "wh69sig": "wh69sig",
+        "wh80sig": "wh80sig",
+        "wh90sig": "wh90sig",
+        "wh85sig": "wh85sig",
+        "wh54sig1": "wh54sig1",
+        "wh54sig2": "wh54sig2",
+        "wh54sig3": "wh54sig3",
+        "wh54sig4": "wh54sig4",
+        "wn64sig": "wn64sig",
+        "wqt01sig": "wqt01sig",
+        "wn20rssi": "wn20rssi",
+        "wh24rssi": "wh24rssi",
+        "wh25rssi": "wh25rssi",
+        "wh26rssi": "wh26rssi",
+        "wh31rssi1": "wh31rssi1",
+        "wh31rssi2": "wh31rssi2",
+        "wh31rssi3": "wh31rssi3",
+        "wh31rssi4": "wh31rssi4",
+        "wh31rssi5": "wh31rssi5",
+        "wh31rssi6": "wh31rssi6",
+        "wh31rssi7": "wh31rssi7",
+        "wh31rssi8": "wh31rssi8",
+        "wh34rssi1": "wh34rssi1",
+        "wh34rssi2": "wh34rssi2",
+        "wh34rssi3": "wh34rssi3",
+        "wh34rssi4": "wh34rssi4",
+        "wh34rssi5": "wh34rssi5",
+        "wh34rssi6": "wh34rssi6",
+        "wh34rssi7": "wh34rssi7",
+        "wh34rssi8": "wh34rssi8",
+        "wh34rssi9": "wh34rssi9",
+        "wh34rssi10": "wh34rssi10",
+        "wh34rssi11": "wh34rssi10",
+        "wh34rssi12": "wh34rssi11",
+        "wh34rssi13": "wh34rssi13",
+        "wh34rssi14": "wh34rssi14",
+        "wh34rssi15": "wh34rssi15",
+        "wh34rssi16": "wh34rssi16",
+        "wh35rssi1": "wh35rssi1",
+        "wh35rssi2": "wh35rssi2",
+        "wh35rssi3": "wh35rssi3",
+        "wh35rssi4": "wh35rssi4",
+        "wh35rssi5": "wh35rssi5",
+        "wh35rssi6": "wh35rssi6",
+        "wh35rssi7": "wh35rssi7",
+        "wh35rssi8": "wh35rssi8",
+        "wn38rssi": "wn38rssi",
+        "wh40rssi": "wh40rssi",
+        "wh41rssi1": "wh41rssi1",
+        "wh41rssi2": "wh41rssi2",
+        "wh41rssi3": "wh41rssi3",
+        "wh41rssi4": "wh41rssi4",
+        "wh45rssi": "wh45rssi",
+        "wh51rssi1": "wh51rssi1",
+        "wh51rssi2": "wh51rssi2",
+        "wh51rssi3": "wh51rssi3",
+        "wh51rssi4": "wh51rssi4",
+        "wh51rssi5": "wh51rssi5",
+        "wh51rssi6": "wh51rssi6",
+        "wh51rssi7": "wh51rssi7",
+        "wh51rssi8": "wh51rssi8",
+        "wh51rssi9": "wh51rssi9",
+        "wh51rssi10": "wh51rssi10",
+        "wh51rssi11": "wh51rssi11",
+        "wh51rssi12": "wh51rssi12",
+        "wh51rssi13": "wh51rssi13",
+        "wh51rssi14": "wh51rssi14",
+        "wh51rssi15": "wh51rssi15",
+        "wh51rssi16": "wh51rssi16",
+        "wh54rssi1": "wh54rssi1",
+        "wh54rssi2": "wh54rssi2",
+        "wh54rssi3": "wh54rssi3",
+        "wh54rssi4": "wh54rssi4",
+        "wh55rssi1": "wh55rssi1",
+        "wh55rssi2": "wh55rssi2",
+        "wh55rssi3": "wh55rssi3",
+        "wh55rssi4": "wh55rssi4",
+        "wh57rssi": "wh57rssi",
+        "wh65rssi": "wh65rssi",
+        "wh68rssi": "wh68rssi",
+        "wh69rssi": "wh69rssi",
+        "wh80rssi": "wh80rssi",
+        "wh85rssi": "wh85rssi",
+        "wh90rssi": "wh90rssi",
+        "wn64rssi": "wn64rssi",
+        "wqt01rssi": "wqt01rssi",
+        "dewptf": "dewptf",
+        "windchillf": "windchillf",
+        "feelslikef": "feelslikef",
+        "heatindexf": "heatindexf",
+        "windgustmph_max10m": "windgustmph_max10m",
+        "windrun": "windrun",
+        "pm25_AQI_ch1": "pm25_AQI_ch1",
+        "pm25_AQI_ch2": "pm25_AQI_ch2",
+        "pm25_AQI_ch3": "pm25_AQI_ch3",
+        "pm25_AQI_ch4": "pm25_AQI_ch4",
+        "pm25_AQI_co2": "pm25_AQI_co2",
+        "pm10_AQI_co2": "pm10_AQI_co2",
+        "pm25_AQI_avg_24h_ch1": "pm25_AQI_avg_24h_ch1",
+        "pm25_AQI_avg_24h_ch2": "pm25_AQI_avg_24h_ch2",
+        "pm25_AQI_avg_24h_ch3": "pm25_AQI_avg_24h_ch3",
+        "pm25_AQI_avg_24h_ch4": "pm25_AQI_avg_24h_ch4",
+        "pm25_AQI_24h_co2": "pm25_AQI_24h_co2",
+        "pm10_AQI_24h_co2": "pm10_AQI_24h_co2",
+        "sunhours": "sunhours",
+        "sunshine": "sunshine",
+        "radcompensation": "radcompensation",
+        "newVersion": "newVersion",
+        "upgrade": "upgrade",
+        "rainFallPriority": "rainFallPriority",
+        "rstRainDay": "rstRainDay",
+        "rstRainWeek": "rstRainWeek",
+        "rstRainYear": "rstRainYear",
+        "rainGain": "rainGain",
+        "piezo": "piezo",
+        "rain1_gain": "gain0",
+        "rain2_gain": "gain1",
+        "rain3_gain": "gain2",
+        "rain4_gain": "gain3",
+        "rain5_gain": "gain4",
+        "wh54_ch1_sig": "wh54sig1",
+        "wh54_ch2_sig": "wh54sig2",
+        "wh54_ch3_sig": "wh54sig3",
+        "wh54_ch4_sig": "wh54sig4",
+        "thi_ch1": "thi_ch1",
+        "thi_ch2": "thi_ch2",
+        "thi_ch3": "thi_ch3",
+        "thi_ch4": "thi_ch4",
+        "depth_ch1": "depth_ch1",
+        "depth_ch2": "depth_ch2",
+        "depth_ch3": "depth_ch3",
+        "depth_ch4": "depth_ch4",
+        "air_ch1": "air_ch1",
+        "air_ch2": "air_ch2",
+        "air_ch3": "air_ch3",
+        "air_ch4": "air_ch4",
+        "ldsbatt1": "ldsbatt1",
+        "ldsbatt2": "ldsbatt2",
+        "ldsbatt3": "ldsbatt3",
+        "ldsbatt4": "ldsbatt4",
+        "ldsheat_ch1": "ldsheat_ch1",
+        "ldsheat_ch2": "ldsheat_ch2",
+        "ldsheat_ch3": "ldsheat_ch3",
+        "ldsheat_ch4": "ldsheat_ch4",
+        "noise_ch1": "noise_ch1",
+        "noise_ch2": "noise_ch2",
+        "noise_ch3": "noise_ch3",
+        "noise_ch4": "noise_ch4",
+        "peak_ch1": "peak_ch1",
+        "peak_ch2": "peak_ch2",
+        "peak_ch3": "peak_ch3",
+        "peak_ch4": "peak_ch4",
+        "ldspw_ch1": "ldspw_ch1",
+        "ldspw_ch2": "ldspw_ch2",
+        "ldspw_ch3": "ldspw_ch3",
+        "ldspw_ch4": "ldspw_ch4",
+        "vpd": "vpd",
+        "bgt": "bgt",
+        "wbgt": "wbgt",
+        "wbgtcat": "wbgtcat",
+        "bgtbatt": "bgtbatt",
+        "wn64batt": "wn64batt",
+        "wqt01batt": "wqt01batt"
+      },
+      "ignored": [
+        "PASSKEY",
+        "dateutc",
+        "freq",
+        "rfdata",
+        "isintvl",
+        "isintvl10",
+        "pm25_AQIlvl_ch1",
+        "pm25_AQIlvl_avg_24h_ch1",
+        "pm25_AQIlvl_ch2",
+        "pm25_AQIlvl_avg_24h_ch2",
+        "pm25_AQIlvl_ch3",
+        "pm25_AQIlvl_avg_24h_ch3",
+        "pm25_AQIlvl_ch4",
+        "pm25_AQIlvl_avg_24h_ch4",
+        "co2lvl",
+        "pm25_AQIlvl_co2",
+        "pm25_AQIlvl_24h_co2",
+        "pm10_AQIlvl_co2",
+        "pm10_AQIlvl_24h_co2",
+        "brightness",
+        "cloudf",
+        "srsum",
+        "osunhours",
+        "nsunhours",
+        "imei",
+        "iccid",
+        "imsi",
+        "msisdn",
+        "wifimode",
+        "up_mtd",
+        "ptrend1",
+        "pchange1",
+        "ptrend3",
+        "pchange3",
+        "running",
+        "wswarning",
+        "sensorwarning",
+        "batterywarning",
+        "stormwarning",
+        "tswarning",
+        "updatewarning",
+        "leakwarning",
+        "co2warning",
+        "intvlwarning",
+        "time"
+      ],
+      "sensor_map": {},
+      "rain_counters": [
+        "totalrainin",
+        "yearlyrainin"
+      ],
+      "piezo_counters": [
+        "total_piezo",
+        "train_piezo",
+        "yrain_piezo"
+      ],
+      "response": "{\"errcode\":\"0\",\"errmsg\":\"ok\"}"
+    },
+    "wu-client": {
+      "labels": {
+        "winddir": "wind_dir",
+        "windspeedmph": "wind_speed",
+        "windgustmph": "wind_gust",
+        "windgustdir": "wind_gust_dir",
+        "humidity": "humidity_out",
+        "dewptf": "dewpoint",
+        "tempf": "temperature_out",
+        "temp2f": "temperature_1",
+        "temp3f": "temperature_2",
+        "temp4f": "temperature_3",
+        "temp5f": "temperature_4",
+        "temp6f": "temperature_5",
+        "temp7f": "temperature_6",
+        "temp8f": "temperature_7",
+        "temp9f": "temperature_8",
+        "humidity2": "humidity_1",
+        "humidity3": "humidity_2",
+        "humidity4": "humidity_3",
+        "humidity5": "humidity_4",
+        "humidity6": "humidity_5",
+        "humidity7": "humidity_6",
+        "humidity8": "humidity_7",
+        "humidity9": "humidity_8",
+        "baromin": "barometer",
+        "soiltempf": "soil_temperature_1",
+        "soiltemp2f": "soil_temperature_2",
+        "soiltemp3f": "soil_temperature_3",
+        "soiltemp4f": "soil_temperature_4",
+        "soiltemp5f": "soil_temperature_5",
+        "soiltemp6f": "soil_temperature_6",
+        "soiltemp7f": "soil_temperature_7",
+        "soiltemp8f": "soil_temperature_8",
+        "soilmoisture": "soil_moisture_1",
+        "soilmoisture2": "soil_moisture_2",
+        "soilmoisture3": "soil_moisture_3",
+        "soilmoisture4": "soil_moisture_4",
+        "soilmoisture5": "soil_moisture_5",
+        "soilmoisture6": "soil_moisture_6",
+        "soilmoisture7": "soil_moisture_7",
+        "soilmoisture8": "soil_moisture_8",
+        "leafwetness": "leafwetness_ch1",
+        "leafwetness2": "leafwetness_ch2",
+        "leafwetness3": "leafwetness_ch3",
+        "leafwetness4": "leafwetness_ch4",
+        "solarradiation": "solar_radiation",
+        "UV": "uv",
+        "visibility": "visibility",
+        "indoortempf": "temperature_in",
+        "indoorhumidity": "humidity_in",
+        "rainin": "rainin",
+        "dailyrainin": "dailyrainin",
+        "weeklyrainin": "weeklyrainin",
+        "monthlyrainin": "monthlyrainin",
+        "yearlyrainin": "rainyear",
+        "softwaretype": "stationtype",
+        "rtfreq": "rtfreq",
+        "AqNO": "no",
+        "AqNO2T": "no2T",
+        "AqNO2": "no2",
+        "AqNO2Y": "no2Y",
+        "AqNOX": "noX",
+        "AqNOY": "noY",
+        "AqNO3": "no3",
+        "AqSO4": "so4",
+        "AqSO2": "so",
+        "AqSO2T": "so2T",
+        "AqCO": "co",
+        "AqCOT": "coT",
+        "AqEC": "ec",
+        "AqOC": "oc",
+        "AqBC": "bc",
+        "AqUV-AETH": "uv_aeth",
+        "AqPM2_5": "pm2_5",
+        "AqPM2.5": "pm2_5",
+        "AqPM10": "pm10_0",
+        "AqOZONE": "ozone",
+        "windchillf": "windchill",
+        "lowbatt": "battery"
+      },
+      "ignored": [
+        "ID",
+        "PASSWORD",
+        "dateutc",
+        "action",
+        "realtime",
+        "weather",
+        "clouds",
+        "osunhours",
+        "nsunhours",
+        "windspdmph_avg2m",
+        "winddir_avg2m",
+        "windgustmph_10m",
+        "windgustdir_10m",
+        "imei",
+        "iccid",
+        "imsi",
+        "msisdn",
+        "wifimode",
+        "up_mtd"
+      ],
+      "sensor_map": {
+        "soilTemp1": "soil_temperature_1",
+        "soilTemp2": "soil_temperature_2",
+        "soilTemp3": "soil_temperature_3",
+        "soilTemp4": "soil_temperature_4",
+        "soilTemp5": "soil_temperature_5",
+        "soilTemp6": "soil_temperature_6",
+        "soilTemp7": "soil_temperature_7",
+        "soilTemp8": "soil_temperature_8"
+      },
+      "rain_counters": [
+        "yearlyrainin",
+        "yearlyrain",
+        "dailyrainin",
+        "dailyrain"
+      ],
+      "piezo_counters": [],
+      "response": "success"
+    }
+  },
+  "installation": {
+    "Ecowittcustom": {
+      "driver": "user.ecowittcustom",
+      "device_type": "ecowitt-client",
+      "port": "8080"
+    },
+    "StdCalibrate": {
+      "Corrections": {
+        "radiation": "luminosity / 126.7 if luminosity is not None else None"
+      }
+    },
+    "Accumulator": {
+      "model": {
+        "accumulator": "firstlast",
+        "extractor": "last"
+      },
+      "stationtype": {
+        "accumulator": "firstlast",
+        "extractor": "last"
+      },
+      "gain0": {
+        "extractor": "last"
+      },
+      "gain1": {
+        "extractor": "last"
+      },
+      "gain2": {
+        "extractor": "last"
+      },
+      "gain3": {
+        "extractor": "last"
+      },
+      "gain4": {
+        "extractor": "last"
+      },
+      "gain5": {
+        "extractor": "last"
+      },
+      "lightning_distance": {
+        "extractor": "last"
+      },
+      "lightning_strike_count": {
+        "extractor": "sum"
+      },
+      "lightning_last_det_time": {
+        "extractor": "last"
+      },
+      "windspdmph_avg10m": {
+        "extractor": "last"
+      },
+      "winddir_avg10m": {
+        "extractor": "last"
+      },
+      "rainRate": {
+        "extractor": "max"
+      },
+      "hourRain": {
+        "extractor": "last"
+      },
+      "dayRain": {
+        "extractor": "last"
+      },
+      "weekRain": {
+        "extractor": "last"
+      },
+      "monthRain": {
+        "extractor": "last"
+      },
+      "yearRain": {
+        "extractor": "last"
+      },
+      "totalRain": {
+        "extractor": "last"
+      },
+      "erain_piezo": {
+        "extractor": "last"
+      },
+      "hrain_piezo": {
+        "extractor": "last"
+      },
+      "drain_piezo": {
+        "extractor": "last"
+      },
+      "wrain_piezo": {
+        "extractor": "last"
+      },
+      "mrain_piezo": {
+        "extractor": "last"
+      },
+      "yrain_piezo": {
+        "extractor": "last"
+      },
+      "p_rainrate": {
+        "extractor": "max"
+      },
+      "hail": {
+        "extractor": "sum"
+      },
+      "vpd": {
+        "extractor": "last"
+      },
+      "depth_ch1": {
+        "extractor": "last"
+      },
+      "depth_ch2": {
+        "extractor": "last"
+      },
+      "wh25_batt": {
+        "extractor": "last"
+      },
+      "wh26_batt": {
+        "extractor": "last"
+      },
+      "wh65_batt": {
+        "extractor": "last"
+      },
+      "wh68_batt": {
+        "extractor": "last"
+      },
+      "ws80_batt": {
+        "extractor": "last"
+      },
+      "ws85_batt": {
+        "extractor": "last"
+      },
+      "ws90_batt": {
+        "extractor": "last"
+      },
+      "ws85cap_volt": {
+        "extractor": "last"
+      },
+      "ws90cap_volt": {
+        "extractor": "last"
+      },
+      "lightning_disturber_count": {
+        "extractor": "last"
+      },
+      "rainBatteryStatus": {
+        "extractor": "last"
+      },
+      "hailBatteryStatus": {
+        "extractor": "last"
+      },
+      "windBatteryStatus": {
+        "extractor": "last"
+      },
+      "consoleext_batt": {
+        "extractor": "last"
+      },
+      "consolebattp": {
+        "extractor": "last"
+      },
+      "soilMoistBatt1": {
+        "extractor": "last"
+      },
+      "soilMoistBatt2": {
+        "extractor": "last"
+      },
+      "soilMoistBatt3": {
+        "extractor": "last"
+      },
+      "soilMoistBatt4": {
+        "extractor": "last"
+      },
+      "soilMoistBatt5": {
+        "extractor": "last"
+      },
+      "soilMoistBatt6": {
+        "extractor": "last"
+      },
+      "soilMoistBatt7": {
+        "extractor": "last"
+      },
+      "soilMoistBatt8": {
+        "extractor": "last"
+      },
+      "soilMoistBatt9": {
+        "extractor": "last"
+      },
+      "soilMoistBatt10": {
+        "extractor": "last"
+      },
+      "soilMoistBatt11": {
+        "extractor": "last"
+      },
+      "soilMoistBatt12": {
+        "extractor": "last"
+      },
+      "soilMoistBatt13": {
+        "extractor": "last"
+      },
+      "soilMoistBatt14": {
+        "extractor": "last"
+      },
+      "soilMoistBatt15": {
+        "extractor": "last"
+      },
+      "soilMoistBatt16": {
+        "extractor": "last"
+      },
+      "soilTempBatt1": {
+        "extractor": "last"
+      },
+      "soilTempBatt2": {
+        "extractor": "last"
+      },
+      "soilTempBatt3": {
+        "extractor": "last"
+      },
+      "soilTempBatt4": {
+        "extractor": "last"
+      },
+      "soilTempBatt5": {
+        "extractor": "last"
+      },
+      "soilTempBatt6": {
+        "extractor": "last"
+      },
+      "soilTempBatt7": {
+        "extractor": "last"
+      },
+      "soilTempBatt8": {
+        "extractor": "last"
+      },
+      "soilTempBatt9": {
+        "extractor": "last"
+      },
+      "soilTempBatt10": {
+        "extractor": "last"
+      },
+      "soilTempBatt11": {
+        "extractor": "last"
+      },
+      "soilTempBatt12": {
+        "extractor": "last"
+      },
+      "soilTempBatt13": {
+        "extractor": "last"
+      },
+      "soilTempBatt14": {
+        "extractor": "last"
+      },
+      "soilTempBatt15": {
+        "extractor": "last"
+      },
+      "soilTempBatt16": {
+        "extractor": "last"
+      },
+      "leafWetBatt1": {
+        "extractor": "last"
+      },
+      "leafWetBatt2": {
+        "extractor": "last"
+      },
+      "leafWetBatt3": {
+        "extractor": "last"
+      },
+      "leafWetBatt4": {
+        "extractor": "last"
+      },
+      "leafWetBatt5": {
+        "extractor": "last"
+      },
+      "leafWetBatt6": {
+        "extractor": "last"
+      },
+      "leafWetBatt7": {
+        "extractor": "last"
+      },
+      "leafWetBatt8": {
+        "extractor": "last"
+      },
+      "co2_Batt": {
+        "extractor": "last"
+      },
+      "pm25_Batt1": {
+        "extractor": "last"
+      },
+      "pm25_Batt2": {
+        "extractor": "last"
+      },
+      "pm25_Batt3": {
+        "extractor": "last"
+      },
+      "pm25_Batt4": {
+        "extractor": "last"
+      },
+      "leak_Batt1": {
+        "extractor": "last"
+      },
+      "leak_Batt2": {
+        "extractor": "last"
+      },
+      "leak_Batt3": {
+        "extractor": "last"
+      },
+      "leak_Batt4": {
+        "extractor": "last"
+      },
+      "lightning_Batt": {
+        "extractor": "last"
+      },
+      "wh24_batt": {
+        "extractor": "last"
+      },
+      "wn20_rssi": {
+        "extractor": "last"
+      },
+      "wh24_rssi": {
+        "extractor": "last"
+      },
+      "wh25_rssi": {
+        "extractor": "last"
+      },
+      "wh26_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch1_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch2_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch3_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch4_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch5_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch6_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch7_rssi": {
+        "extractor": "last"
+      },
+      "wh31_ch8_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch1_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch2_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch3_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch4_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch5_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch6_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch7_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch8_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch9_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch10_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch11_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch12_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch13_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch14_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch15_rssi": {
+        "extractor": "last"
+      },
+      "wn34_ch16_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch1_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch2_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch3_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch4_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch5_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch6_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch7_rssi": {
+        "extractor": "last"
+      },
+      "wn35_ch8_rssi": {
+        "extractor": "last"
+      },
+      "wn38_rssi": {
+        "extractor": "last"
+      },
+      "wh40_rssi": {
+        "extractor": "last"
+      },
+      "wh41_ch1_rssi": {
+        "extractor": "last"
+      },
+      "wh41_ch2_rssi": {
+        "extractor": "last"
+      },
+      "wh41_ch3_rssi": {
+        "extractor": "last"
+      },
+      "wh41_ch4_rssi": {
+        "extractor": "last"
+      },
+      "wh45_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch1_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch2_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch3_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch4_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch5_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch6_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch7_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch8_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch9_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch10_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch11_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch12_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch13_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch14_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch15_rssi": {
+        "extractor": "last"
+      },
+      "wh51_ch16_rssi": {
+        "extractor": "last"
+      },
+      "wh54_ch1_rssi": {
+        "extractor": "last"
+      },
+      "wh54_ch2_rssi": {
+        "extractor": "last"
+      },
+      "wh54_ch3_rssi": {
+        "extractor": "last"
+      },
+      "wh54_ch4_rssi": {
+        "extractor": "last"
+      },
+      "wh55_ch1_rssi": {
+        "extractor": "last"
+      },
+      "wh55_ch2_rssi": {
+        "extractor": "last"
+      },
+      "wh55_ch3_rssi": {
+        "extractor": "last"
+      },
+      "wh55_ch4_rssi": {
+        "extractor": "last"
+      },
+      "wh57_rssi": {
+        "extractor": "last"
+      },
+      "wh65_rssi": {
+        "extractor": "last"
+      },
+      "wh68_rssi": {
+        "extractor": "last"
+      },
+      "wh69_rssi": {
+        "extractor": "last"
+      },
+      "wh80_rssi": {
+        "extractor": "last"
+      },
+      "wh85_rssi": {
+        "extractor": "last"
+      },
+      "wh90_rssi": {
+        "extractor": "last"
+      },
+      "ws80_rssi": {
+        "extractor": "last"
+      },
+      "ws85_rssi": {
+        "extractor": "last"
+      },
+      "ws90_rssi": {
+        "extractor": "last"
+      },
+      "wn64_rssi": {
+        "extractor": "last"
+      },
+      "wqt01_rssi": {
+        "extractor": "last"
+      },
+      "ldsbatt1": {
+        "extractor": "last"
+      },
+      "ldsbatt2": {
+        "extractor": "last"
+      },
+      "ldsbatt3": {
+        "extractor": "last"
+      },
+      "ldsbatt4": {
+        "extractor": "last"
+      },
+      "co2_batt6": {
+        "extractor": "last"
+      },
+      "bgtbatt": {
+        "extractor": "last"
+      },
+      "wn64batt": {
+        "extractor": "last"
+      },
+      "wqt01batt": {
+        "extractor": "last"
+      },
+      "eventRain": {
+        "extractor": "last"
+      },
+      "rain24": {
+        "extractor": "last"
+      },
+      "rain24_piezo": {
+        "extractor": "last"
+      },
+      "train_piezo": {
+        "extractor": "last"
+      },
+      "srain_piezo": {
+        "extractor": "last"
+      },
+      "lightning_num": {
+        "extractor": "last"
+      },
+      "ws_interval": {
+        "extractor": "last"
+      },
+      "hailRate": {
+        "extractor": "max"
+      },
+      "p_rain": {
+        "extractor": "sum"
+      },
+      "txBatteryStatus": {
+        "extractor": "last"
+      },
+      "batteryStatus1": {
+        "extractor": "last"
+      },
+      "batteryStatus2": {
+        "extractor": "last"
+      },
+      "batteryStatus3": {
+        "extractor": "last"
+      },
+      "batteryStatus4": {
+        "extractor": "last"
+      },
+      "batteryStatus5": {
+        "extractor": "last"
+      },
+      "batteryStatus6": {
+        "extractor": "last"
+      },
+      "batteryStatus7": {
+        "extractor": "last"
+      },
+      "batteryStatus8": {
+        "extractor": "last"
+      },
+      "outTempBatteryStatus": {
+        "extractor": "last"
+      },
+      "inTempBatteryStatus": {
+        "extractor": "last"
+      },
+      "gain6": {
+        "extractor": "last"
+      },
+      "gain7": {
+        "extractor": "last"
+      },
+      "gain8": {
+        "extractor": "last"
+      },
+      "gain9": {
+        "extractor": "last"
+      },
+      "wh24_sig": {
+        "extractor": "last"
+      },
+      "wh25_sig": {
+        "extractor": "last"
+      },
+      "wh26_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch1_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch2_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch3_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch4_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch5_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch6_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch7_sig": {
+        "extractor": "last"
+      },
+      "wh31_ch8_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch1_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch2_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch3_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch4_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch5_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch6_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch7_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch8_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch9_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch10_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch11_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch12_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch13_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch14_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch15_sig": {
+        "extractor": "last"
+      },
+      "wn34_ch16_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch1_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch2_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch3_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch4_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch5_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch6_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch7_sig": {
+        "extractor": "last"
+      },
+      "wn35_ch8_sig": {
+        "extractor": "last"
+      },
+      "wn38_sig": {
+        "extractor": "last"
+      },
+      "wh40_sig": {
+        "extractor": "last"
+      },
+      "wh41_ch1_sig": {
+        "extractor": "last"
+      },
+      "wh41_ch2_sig": {
+        "extractor": "last"
+      },
+      "wh41_ch3_sig": {
+        "extractor": "last"
+      },
+      "wh41_ch4_sig": {
+        "extractor": "last"
+      },
+      "wh45_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch1_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch2_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch3_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch4_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch5_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch6_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch7_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch8_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch9_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch10_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch11_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch12_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch13_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch14_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch15_sig": {
+        "extractor": "last"
+      },
+      "wh51_ch16_sig": {
+        "extractor": "last"
+      },
+      "wh55_ch1_sig": {
+        "extractor": "last"
+      },
+      "wh55_ch2_sig": {
+        "extractor": "last"
+      },
+      "wh55_ch3_sig": {
+        "extractor": "last"
+      },
+      "wh55_ch4_sig": {
+        "extractor": "last"
+      },
+      "wh57_sig": {
+        "extractor": "last"
+      },
+      "wh65_sig": {
+        "extractor": "last"
+      },
+      "wh68_sig": {
+        "extractor": "last"
+      },
+      "wh69_sig": {
+        "extractor": "last"
+      },
+      "ws80_sig": {
+        "extractor": "last"
+      },
+      "ws85_sig": {
+        "extractor": "last"
+      },
+      "ws90_sig": {
+        "extractor": "last"
+      },
+      "wh54_ch1_sig": {
+        "extractor": "last"
+      },
+      "wh54_ch2_sig": {
+        "extractor": "last"
+      },
+      "wh54_ch3_sig": {
+        "extractor": "last"
+      },
+      "wh54_ch4_sig": {
+        "extractor": "last"
+      },
+      "wn64_sig": {
+        "extractor": "last"
+      },
+      "wqt01_sig": {
+        "extractor": "last"
+      },
+      "rain_source": {
+        "extractor": "last"
+      },
+      "rain_day_reset": {
+        "extractor": "last"
+      },
+      "rain_week_reset": {
+        "extractor": "last"
+      },
+      "rain_annual_reset": {
+        "extractor": "last"
+      },
+      "raingain": {
+        "extractor": "last"
+      },
+      "maxdailygust": {
+        "extractor": "last"
+      }
+    }
+  }
+}

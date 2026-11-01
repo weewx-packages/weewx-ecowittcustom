@@ -5,11 +5,22 @@ driver of WernerKr/Ecowitt-or-DAVIS-stations-and-Season-skin without the skins.
 
 ## Checks
 
-- `python -m pytest -q tests`: about 1 second. Needs WeeWX and pytest.
+- `PYTHONPATH=bin uv run --isolated --no-project --with weewx --with pytest python -m pytest -q tests`:
+  parser, loopback HTTP, passive framing and archive installation/removal tests.
+- Run the `python-docstring-types` skill after changing typed docstrings.
 
 ## Conventions
 
-`bin/user/ecowittcustom.py` stays unchanged from upstream, so a new upstream driver
-can replace it file for file. Record each import in `ORIGIN.md`. Packaging changes
-get a `.post` version. Nothing from the skins, the helpers or Highcharts comes in:
-their rights are not shown. See `catalog/ci/wiki-audit.json`, line 201.
+This is an independent continuation. Do not replace files with upstream copies.
+Keep the authorship and source archive recorded in `ORIGIN.md`.
+
+`bin/user/ecowittcustom.py` supplies the stable WeeWX entry points. Implementation
+lives in `bin/user/ecowittcustomlib`; field maps, units and installation settings
+live in `definitions.json`. See `docs/development.md` for the data format and
+counter rules. Preserve the existing observation names when changing mappings.
+
+Python follows WeeWX conventions, with types in Google docstrings rather than
+runtime annotations. Use the standard library and WeeWX dependencies.
+
+Skins, upstream helper services, database schemas and Highcharts remain excluded.
+Their rights are not shown. See `ORIGIN.md` and the catalog license audit.
